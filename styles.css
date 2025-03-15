@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0FFF0;
+}
+
+/* --- Header --- */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%; /* Start with no underline */
+    height: 3px;
+    bottom: -5px; /* Space between text and underline */
+    left: 0;
+    background-color:#B8E5B8; /* Underline color */
+    transition: width 0.5s ease-in-out; /* Smooth sliding effect */
+    }
+
+nav ul li a:hover {
+    color: #B8E5B8;
+    text-decoration: underline;
+        width: 100%; /* Full width underline on hover */
+    
+}
+
+/* --- Main Layout --- */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* --- Left Image (Fixed) --- */
+.left-image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    background: url('lef.jpg') no-repeat center center/cover;
+}
+
+/* --- Right Content --- */
+.right-content {
+    margin-left: 27%;
+     padding: 5%;
+     overflow-y: auto;
+    width: 80%;
+    height: 100vh;
+}
+
+/* --- Section Styling --- */
+.section {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Resume Button --- */
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.resume-btn:hover {
+    background-color: #444;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+
+/* --- Smooth Scroll --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.paint{
+    width: 150px;
+    height: 150px;
+    border: 30px solid #F0FFF0;
+}
+.music{
+    width: 150px;
+    height: 150px;
+    border: 30px solid #F0FFF0; 
+}
+.nat{
+    border: 30px solid #F0FFF0;
+    width: 100px;
+    height: 150px; 
+}
+.hist{
+    border: 30px solid #F0FFF0;
+    width: 170px;
+    height: 150px;   
+}
+.certi{
+    width: 200px;
+    height: 170px;
+    border: 30px solid #F0FFF0;
+}
+.certifi{
+ 
+    width: 150px;
+    height: 170px;
+    border: 30px solid #F0FFF0;
+}
