@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Contact Us - Stormy Wanderlust</title>
+  
+
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <h4>We would love to hear from you! ❤️</h4>
+        <form id="contactForm">
+            <div class="input-container">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-container">
+                <input type="text" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="input-container">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="btn" id="sendBtn">Send Message</button>
+            </div>
+        </form>
+        <div id="successMessage" class="hidden">💌 Message Sent Successfully!</div>
+        
+
+<!-- Contact Section -->
+<section class="contact-container">
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@stormywanderlust.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu, India</p>
+    </div>
+
+    <div id="map"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Stormy Wanderlust © 2025</p>
+</footer>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent page reload
+
+        // Show success message
+        document.getElementById('successMessage').classList.remove('hidden');
+
+        // Clear the form after submission
+        document.getElementById('contactForm').reset();
+
+        // Hide success message after 3 seconds
+        setTimeout(function () {
+            document.getElementById('successMessage').classList.add('hidden');
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>

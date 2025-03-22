@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Stormy Wanderlust</title>
+    <link rel="stylesheet" href="destination.css">
+    <script src="destination.js" defer></script>
+    <button class="book-btn" onclick="window.location.href='main.html#book-now';">Book Now</button>
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo.jpg" alt="Stormy Logo">
+            <span>Stormy Wanderlust</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn" onclick="window.location.href='login.html'">Log In</button>
+    </header>
+    <!-- Explore Destinations -->
+    <section class="destination-section">
+        <h2 style="color: aliceblue;">Explore Destinations by Weather</h2>
+        <div class="destination-container">
+            <div class="destination-card summer">
+                <img src="summer1.jpg" alt="Goa Beaches">
+                <h3>Goa Beaches</h3>
+                <p>Feel the summer vibes and unwind at the sunny beaches of Goa.</p>
+                <button class="view-details-btn" onclick="openDestinationModal('Goa Beaches')">View Details</button>
+            </div>
+            <div class="destination-card winter">
+                <img src="winter1.jpg" alt="Manali Snow Peaks">
+                <h3>Manali Snow Peaks</h3>
+                <p>Enjoy the winter magic with breathtaking views in Manali.</p>
+                <button class="view-details-btn" onclick="openDestinationModal('Manali Snow Peaks')">View Details</button>
+            </div>
+            <div class="destination-card monsoon">
+                <img src="monsoon1.jpg" alt="Meghalaya Hills">
+                <h3>Meghalaya Hills</h3>
+                <p>Experience the lush greenery and serene monsoon vibes of Meghalaya.</p>
+                <button class="view-details-btn" onclick="openDestinationModal('Meghalaya Hills')">View Details</button>
+            </div>
+        </div>
+    </section>
+<br><br>
+<section class="features-section">
+    <h2 class="features-title" style="color: beige;">Experience Luxury at Our Top Destinations</h2>
+    <div class="features-container">
+        <div class="feature-card">
+            <img src="goa.jpg" alt="Goa Resort">
+            <h3>Luxury Beachside Resorts</h3>
+            <p>Relax with breathtaking views and 5-star amenities in Goa.</p>
+            <button class="feature-btn" onclick="window.location.href='book-now.html'">Book Now</button>
+        </div>
+        <div class="feature-card">
+            <img src="manali.jpg" alt="Manali Hotel">
+            <h3>Cozy Winter Escapes</h3>
+            <p>Enjoy snow-capped peaks and warm hospitality in Manali.</p>
+            <button class="feature-btn" onclick="window.location.href='book-now.html'">Book Now</button>
+        </div>
+        <div class="feature-card">
+            <img src="meghalaya.jpg" alt="Meghalaya Stay">
+            <h3>Nature Retreats in Meghalaya</h3>
+            <p>Immerse yourself in lush greenery and serenity.</p>
+            <button class="feature-btn" onclick="window.location.href='book-now.html'">Book Now</button>
+        </div>
+    </div>
+</section> 
+<style>
+    .features-section {
+        padding: 50px 20px;
+        text-align: center;
+       
+    }
+    .features-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .features-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+        background: url('backs.jpg') no-repeat center center fixed;
+    }
+    .feature-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .feature-card img {
+        width: 100%;
+        border-radius: 12px;
+    }
+    .feature-card h3 {
+        margin-top: 15px;
+        font-size: 20px;
+        color: #444;
+    }
+    .feature-card p {
+        font-size: 14px;
+        color: #666;
+        margin: 10px 0;
+    }
+    .feature-btn {
+        background-color: #ff4e00;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .feature-btn:hover {
+        background-color: #ff8c00;
+    }
+    </style>
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="offer-card">
+            <h2 style="color: #333;">🎉 Special Offers</h2>
+            <p>🔥 Get up to <strong>30% off</strong> on early bookings!</p>
+            <button class="offer-btn">Grab Offer Now!</button>
+        </div>
+    </section>
+    
+    <!-- Google Map Section -->
+    <section class="map-section">
+        <h2>Find Us on Google Maps</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" allowfullscreen=""></iframe>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Stormy Wanderlust © 2025</p>
+    </footer>
+</body>
+
+</html>

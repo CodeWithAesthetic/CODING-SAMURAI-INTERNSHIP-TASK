@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stormy Wanderlust</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo.jpg" alt="Stormy Logo">
+            <span>STORMY WANDERLUST</span>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+
+                <li><a href="#about">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    
+        <button class="login-btn" onclick="window.location.href='login.html'">Log In</button>
+    </header>
+    
+    
+   
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide">
+                    <img src="hero.jpg" alt="Home" onclick="navigateTo('home.html')">
+                    <div class="carousel-text">Explore Stunning Destinations 🌴
+                <div><span style="font-size: medium;color: bisque;text-align: center;font-style: oblique;">>>HOME</span></div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="hero2.jpg" alt="Destinations" onclick="navigateTo('destinations.html')">
+                    <div class="carousel-text">Immerse in Cultural Wonders 🎭
+                    <div><span style="font-size: medium;color: bisque;text-align: center;font-style: oblique;">>>DESTINATIONS</span></div>
+                </div></div>
+                <div class="carousel-slide">
+                    <img src="hero3.jpg" alt="Contact" onclick="navigateTo('contact.html')">
+                    <div class="carousel-text">Feel the Thrill of Adventure ⛰️
+                    <div><span style="font-size: medium;color: bisque;text-align: center;font-style: oblique;">>>CONTACT US</span></div>
+                </div></div>
+                <div class="carousel-slide">
+                    <img src="hero4.jpg" alt="Blog" onclick="navigateTo('blog.html')">
+                    <div class="carousel-text">Uncover Hidden Stories ✨
+                    <div><span style="font-size: medium;color: bisque;text-align: center;font-style: oblique;">>>BLOG</span></div>
+                </div></div>
+            </div>
+    
+            <!-- Arrows -->
+            <div class="arrow arrow-left" onclick="moveSlide(-1)">❮</div>
+            <div class="arrow arrow-right" onclick="moveSlide(1)">❯</div>
+    
+            <!-- Dots -->
+            <div class="carousel-dots">
+                <span class="dot" onclick="moveToSlide(0)"></span>
+                <span class="dot" onclick="moveToSlide(1)"></span>
+                <span class="dot" onclick="moveToSlide(2)"></span>
+                <span class="dot" onclick="moveToSlide(3)"></span>
+            </div>
+        </div>
+ <!-- Booking Form (Popup) -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+        <h2>Book Your Dream Destination</h2>
+        <form id="bookingForm" onsubmit="confirmBooking(event)">
+            <label for="destination">Choose Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="Goa Beaches">Goa Beaches</option>
+                <option value="Manali Snow Peaks">Manali Snow Peaks</option>
+                <option value="Meghalaya Hills">Meghalaya Hills</option>
+            </select>
+
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+            <button type="submit" class="confirm-btn">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+<!-- Booking Confirmation Message -->
+<div id="confirmationMsg" class="confirmation-msg" style="display: none;">
+    <p>Booking Confirmed! 🎉</p>
+</div>
+
+<!-- BOOK NOW Button to Trigger Popup -->
+<button class="home-book-btn" onclick="openBookingForm()">BOOK NOW</button>
+
+
+    </section>
+ <!-- About Us Section -->
+ <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>Stormy Wanderlust helps travelers explore hidden gems across India, 
+        offering weather-inspired destinations with luxury stays and exclusive offers. 
+        Join us to experience unforgettable adventures.</p>
+
+    <div class="about-features">
+        <div class="feature adventure">
+            <h3>Thrilling Adventures</h3>
+            <p>Explore breathtaking locations and satisfy your wanderlust with our adventurous destinations.</p>
+        </div>
+        <div class="feature luxury">
+            <h3>Luxurious Stays</h3>
+            <p>Indulge in comfort and luxury at handpicked stays that guarantee a memorable experience.</p>
+        </div>
+        
+        <div class="feature offers">
+            <h3>Exclusive Offers</h3>
+            <p>Save more with our exciting deals and seasonal discounts curated just for you.</p>
+        </div>
+        
+    </div>
+</section>
+ <!-- Footer -->
+ <footer class="main-footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h3>🌩️ Stormy Wanderlust</h3>
+            <p>Explore destinations inspired by weather and discover adventures with exclusive offers. Embark on journeys that satisfy your wanderlust and create unforgettable memories!</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>🚀 Quick Links</h3>
+            <ul>
+                <li><a href="main.html">🏠 Home</a></li>
+                <li><a href="destinations.html">🌏 Destinations</a></li>
+                <li><a href="#about">📚 About Us</a></li>
+                <li><a href="contact.html">📞 Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-section social">
+            <h3>📲 Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>© 2025 Stormy Wanderlust. All rights reserved. | Designed with ❤️ by Stormy Team</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
